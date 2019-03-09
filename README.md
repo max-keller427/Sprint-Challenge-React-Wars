@@ -28,9 +28,15 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What does it mean to _think_ in react?
 
+It means to think in terms of components, and how data will flow between them.
+
 - [ ] Describe state.
 
+state is immutable data held in a class constructor. it can be used to manipulate the virtual dom, much faster than manipulating the actual dom would be. 
+
 - [ ] Describe props.
+
+props are pieces of data passed around functional components. They can be used to update state data and make components dynamic. 
 
 ## Project Set Up
 
