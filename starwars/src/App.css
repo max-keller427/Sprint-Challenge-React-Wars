@@ -9,5 +9,7 @@
 
 .character {
   border: 1px solid red;
-  /* display: flex; */
+  background-color: grey;
+  opacity: 50%;
+  width: 60%;
 }
