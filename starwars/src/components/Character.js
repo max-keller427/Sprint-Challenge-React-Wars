@@ -4,31 +4,79 @@ function Character(props) {
   console.log(props.character.films);
   return (
     <div className="character">
-      <h3>Name: {props.character.name}</h3>
-      <ul>
-        <p>Birth Year: {props.character.birth_year}</p>
-        <p>Created: {props.character.created}</p>
-        <p>Edited: {props.character.edited}</p>
-        <p>Eye Color: {props.character.eye_color}</p>
+      <h3>{props.character.name}</h3>
+
+      <p>
+        <strong>Birth Year:</strong> {props.character.birth_year}
+      </p>
+      <p>
+        <strong>Created:</strong> {props.character.created}
+      </p>
+      <p>
+        <strong>Edited:</strong> {props.character.edited}
+      </p>
+      <p>
+        <strong>Eye Color:</strong> {props.character.eye_color}
+      </p>
+      <div className="ul-list">
         <p>
-          Films:{" "}
+          <strong>Films </strong>
+        </p>
+        <ul>
+          {props.character.films.map(film => (
+            <li>{film}</li>
+          ))}
+        </ul>
+      </div>
+      <p>
+        <strong>Gender: </strong>
+        {props.character.gender}
+      </p>
+      <p>
+        <strong>Hair Color:</strong> {props.character.hair_color}
+      </p>
+      <p>
+        <strong>Height:</strong> {props.character.height}
+      </p>
+      <p>
+        <strong>Homeworld:</strong> {props.character.homeworld}
+      </p>
+      <p>
+        <strong>Mass:</strong> {props.character.mass}
+      </p>
+      <p>
+        <strong>Skin Color:</strong> {props.character.skin_color}
+      </p>
+      <p>
+        <strong>Species:</strong> {props.character.species}
+      </p>
+      <div className="ul-list">
+        <p>
+          <strong>Starships </strong>
+        </p>
+        {
           <ul>
-            {props.character.films.map(film => (
-              <li>{film}</li>
+            {props.character.starships.map(ship => (
+              <li>{ship}</li>
             ))}
           </ul>
+        }
+      </div>
+      <p>
+        <strong>URL:</strong> {props.character.url}
+      </p>
+      <div className="ul-list">
+        <p>
+          <strong>Vehicles </strong>
         </p>
-        <p>Gender: {props.character.gender}</p>
-        <p>Hair Color: {props.character.hair_color}</p>
-        <p>Height: {props.character.height}</p>
-        <p>Homeworld: {props.character.homeworld}</p>
-        <p>Mass: {props.character.mass}</p>
-        <p>Skin Color: {props.character.skin_color}</p>
-        <p>Species: {props.character.species}</p>
-        <p>Starships: {props.character.starships}</p>
-        <p>URL: {props.character.url}</p>
-        <p>Vehicles: {props.character.vehicles}</p>
-      </ul>
+        {
+          <ul>
+            {props.character.vehicles.map(vehicle => (
+              <li>{vehicle}</li>
+            ))}
+          </ul>
+        }
+      </div>
     </div>
   );
 }
