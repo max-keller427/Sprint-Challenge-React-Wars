@@ -24,17 +24,36 @@
   margin: 5%;
 }
 
+.character h3 {
+  text-decoration: underline;
+  color: #443e3e;
+  text-shadow: 1px 1px 5px #fff;
+  font-size: 3rem;
+}
+
+.character strong {
+  color: #443e3e;
+  text-shadow: 1px 1px 5px #fff;
+}
+
+.character p {
+  color: white;
+}
+
 .character ul {
   list-style-type: katakana;
+  list-style-position: inside;
 }
 
 .ul-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 
 .ul-list p {
   text-decoration: underline;
   margin-bottom: 0;
+  /* color: white; */
 }

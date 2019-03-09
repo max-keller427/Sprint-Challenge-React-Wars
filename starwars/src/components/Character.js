@@ -5,7 +5,6 @@ function Character(props) {
   return (
     <div className="character">
       <h3>{props.character.name}</h3>
-
       <p>
         <strong>Birth Year:</strong> {props.character.birth_year}
       </p>
