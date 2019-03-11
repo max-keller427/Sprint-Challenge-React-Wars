@@ -1,16 +1,35 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+
+import "./components/Character";
+import Character from "./components/Character";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      birth_year: "",
+      created: "",
+      edited: "",
+      eye_color: "",
+      films: "",
+      gender: "",
+      hair_color: "",
+      height: "",
+      homeworld: "",
+      mass: "",
+      name: "",
+      skin_color: "",
+      species: "",
+      starships: "",
+      url: "",
+      vehicles: ""
     };
   }
 
   componentDidMount() {
-    this.getCharacters('https://swapi.co/api/people/');
+    this.getCharacters("https://swapi.co/api/people/");
   }
 
   getCharacters = URL => {
@@ -33,9 +52,15 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <div className="list">
+          {this.state.starwarsChars.map(character => (
+            <Character character={character} />
+          ))}
+        </div>
       </div>
     );
   }
 }
 
 export default App;
+// :)
